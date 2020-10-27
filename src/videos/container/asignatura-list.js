@@ -7,33 +7,33 @@ import Layout from '../components/asignatura-list-layout'
 import Empty from '../components/empty'
 import Separator from '../../sections/container/horizontal-separator'
 import Asignatura from '../components/asignatura'
-import { connect } from 'react-redux';
-
-function mapStateToProps(state) {
-  // debugger
-  return {
-    list: state.coursesList
-  }
-}
 
 
-class AsignaturaList extends Component {
+
+const AsignaturaList = (props) => {
+  // console.log('key', props.course);
   keyExtractor = (item) => item.codeAcademicCharge.toString()
   renderEmpty = () => <Empty text="No hay sugerencias"></Empty>
   itemSeparator = () => <Separator  />
+  viewSubject = (item) => {
+    console.log('key', props);
+  }
   renderItem = ({item}) => {
-    return (
-    <Asignatura {...item} />
+    
+    return (      
+        <Asignatura 
+          {...item}
+          onPress={() => {this.viewSubject(item)}}        
+        />   
     )
   }
-  render() {
     return(
       <Layout
       title="Asignaturas">
     <FlatList
       horizontal
       keyExtractor={this.keyExtractor}
-      data={this.props.list}
+      data={props.course}
       ListEmptyComponent={this.renderEmpty}
       ItemSeparatorComponent={this.itemSeparator}
       renderItem={this.renderItem}
@@ -41,6 +41,4 @@ class AsignaturaList extends Component {
     </Layout>
     )
   }
-}
-
-export default connect(mapStateToProps)(AsignaturaList);
+export default AsignaturaList;

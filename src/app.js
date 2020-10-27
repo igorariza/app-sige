@@ -3,34 +3,51 @@ import {
   Text,
   View,
 } from 'react-native';
-import { connect } from 'react-redux';
-import { store } from '../store';
 import useCoursesStudent from '../utils/hooks/useCoursesStudent'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Home from './screens/container/home';
-import Header from './sections/components/header'
-import AsignaturaList from './videos/container/asignatura-list'
-import ActivityList from './videos/container/activity-list'
+import { log } from 'react-native-reanimated';
+import { createStackNavigator } from '@react-navigation/stack';
+import Details from './videos/components/details'
+// import Header from './src/sections/components/header'
 
-const AppLayout = () => {
+const Stack = createStackNavigator();
+
+const AppLayout = (props) => {
   const student_id = 101285
   const API = `https://api-test.sige-edu.com:8000/api/courses/academiccharge/bystudent/${student_id}`
   const { coursesList, loading } = useCoursesStudent(API)
-  store.dispatch({
-    type: 'SET_SUBJECT_LIST',
-    payload:{
-     coursesList
+  const storeData = async (value) => {
+    try {
+      const jsonValue = JSON.stringify(coursesList)
+      await AsyncStorage.setItem('coursesList', jsonValue)
+    } catch (e) {
+      // saving error
     }
-  })
+  }
+  // console.log('JSON.stringify(coursesList)',coursesList);
+
     return (
-      <Home>     
-        <Header>
-          <Text>Colcentral</Text>
-        </Header>
-        <Text>buscador</Text>
-        <AsignaturaList/>
-        <ActivityList/>
-      </Home>
+      <Stack.Navigator
+        initialRouteName="Home"
+      //   screenOptions={{
+      //     headerShown: false
+      // }}
+      >
+        <Stack.Screen 
+            name="Asignaturas" 
+            component={Home}
+            options={{
+              headerShown: false,
+            }}  />
+        <Stack.Screen 
+          name="Actividad" 
+          component={Details}
+        />
+      </Stack.Navigator>
+      
     )
 }
 
-export default connect(null)(AppLayout);
+
+export default AppLayout;

@@ -2,10 +2,12 @@ import React from 'react';
 import {
   View,
   Text,
-  ImageBackground,
+  Image,
   StyleSheet,
-  TouchableOpacity,
+  ScrollView,
 } from 'react-native';
+import { WebView } from 'react-native-webview';
+
 const tempImg = [
   'https://images.pexels.com/photos/2170/creative-desk-pens-school.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   'https://images.pexels.com/photos/1053687/pexels-photo-1053687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -32,48 +34,94 @@ const tempImg = [
   'https://images.pexels.com/photos/632470/pexels-photo-632470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 ]
 
-function Asignatura(props) {  
+
+const makeHTML = (id) => {
+  return (`
+    <style>
+      .video {
+        position: relative;
+        padding-bottom: 56.25%;
+      }
+      iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7sbbb7Dt3D8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  `)
+}
+
+function Details(props) {
+  console.log('props', props.route.params.item.courseDictate.nameCourse);
   return (
-    <TouchableOpacity
-      onPress={props.onPress}
-    >
-      <ImageBackground
-        style={styles.wrapper}
-        source={{
-          uri: tempImg[Math.floor(Math.random() * 20)]
-        }}
-      >
-          <Text 
-          style={styles.name_course}
-          adjustsFontSizeToFit={true}
-          numberOfLines={2}
-          >{props.courseDictate.nameCourse}</Text>
-      </ImageBackground>
-    </TouchableOpacity>
+    <ScrollView>
+      <View style={styles.top}>
+  <Text>{props.route.params.item.courseDictate.nameCourse}</Text>
+      </View>
+      <View style={styles.bottom}>
+        <View style={styles.details}>
+          <Image
+            style={styles.cover}
+            source={{
+              uri: tempImg[Math.floor(Math.random() * 20)]
+            }}
+          />
+          <Text style={styles.description}>{props.description_full}</Text>
+        </View>
+      </View>
+      <View style={styles.trailer}>
+        <WebView
+          source={{html: makeHTML(props.yt_trailer_code ) }}
+        />
+      </View>
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
-  wrapper: {
-    width: 250,
-    height: 100,
-    borderRadius: 10,
-    overflow: 'hidden',
-    justifyContent: 'center',
-    alignItems: 'center',
+  container: {
   },
-  name_course: {
-    color: 'white',
-    textAlign: 'center',
-    fontSize: 40,
+  trailer: {
+    height: 200,
+    marginBottom: 10,
+  },
+  details: {
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
+  cover: {
+    width: 125,
+    height: 190,
+  },
+  title: {
+    color: '#44546b',
+    fontSize: 18,
     fontWeight: 'bold',
-    textShadowColor: 'rgba(0,0,0, .75)',
-    textShadowOffset: {
-      width: 2,
-      height: 2
-    },
-    textShadowRadius: 0,
+  },
+  top: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#eaeaea',
+    padding: 20,
+    backgroundColor: 'white',
+  },
+  bottom: {
+    padding: 20,
+    flex: 1,
+  },
+  description: {
+    fontSize: 15,
+    lineHeight: 22.5,
+    color: '#4c4c4c',
+    marginLeft: 10,
+    flex: 1,
   }
 })
 
-export default Asignatura;
+export default Details;
