@@ -39,7 +39,7 @@ const Home = (props) => {
     )
 }
 
-Home.navigationOptions = screenProps => ({
+Home.navigationOptions = props => ({
   headerTitle: (props) => <Text>Start</Text>,
 })
 export default Home;

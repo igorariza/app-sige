@@ -44,8 +44,7 @@ const AppLayout = (props) => {
           name="Actividad" 
           component={Details}
         />
-      </Stack.Navigator>
-      
+      </Stack.Navigator>      
     )
 }
 
