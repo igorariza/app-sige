@@ -39,3 +39,4 @@ const TabLayout = () =>{
       </Tab.Navigator> 
   )
 }
+export default TabLayout;

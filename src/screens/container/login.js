@@ -10,20 +10,22 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-class Login extends Component {
+const Login = () => {
+  const navigation = useNavigation(); 
   handleLogin = () => {
     // const token = 'ABCDEFGHIJK';
     // this.props.dispatch({
     //   type: 'SET_USER',
     //   payload: {
     //     token,
-    //     username: 'LeonidasEsteban'
+    //     username: ''
     //   }
     // })
-    // this.props.navigation.navigate('Loading');
+    navigation.navigate('App') 
   }
-  render() {
+
     return (
       <ImageBackground 
           source={require('../../../assets/backgronund.png')} 
@@ -54,18 +56,24 @@ class Login extends Component {
             style={styles.button}
           >
             <Text style={styles.buttonLabel}>Iniciar Sesión</Text>
-          </TouchableOpacity>
-        </View>        
+          </TouchableOpacity>                  
+        </View>
+        <Text style={styles.textByGroupar}>By Groupar</Text>
       </SafeAreaView>
       </ImageBackground>
     )
-  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+  },
+  textByGroupar:{
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginTop: 50,
+    fontSize: 18,
   },
   logo: {
     width: 200,

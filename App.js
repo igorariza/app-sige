@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createSwitchNavigator } from "@react-navigation/compat";
 import Loading from './src/sections/components/loading';
 import Login from './src/screens/container/login'
-import Applayout from './src/app'
+import TabLayout from './tab-layout'
 
 
 function App(props) {
@@ -18,7 +18,7 @@ function App(props) {
 }
 const SwitchNavigator = createSwitchNavigator({
   "Loading": { screen: Loading, },
-  "App": Applayout,
+  "App": TabLayout,
   "Login": Login,
 },
 {
