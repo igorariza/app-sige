@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react'
 import {
   View,
   Text,
@@ -8,22 +8,56 @@ import {
   SafeAreaView,
   ImageBackground,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from 'react-native';
+import axios from "axios";
+import Store from '../../../store'
+import Spinner from 'react-native-loading-spinner-overlay';
 import { useNavigation } from '@react-navigation/native';
 
 const Login = () => {
+  
+  const [email, setEmail] = useState()
+  const [loading, setLoading] = useState()
+  const [password, setPassword] = useState()
   const navigation = useNavigation(); 
+  
   handleLogin = () => {
-    // const token = 'ABCDEFGHIJK';
-    // this.props.dispatch({
-    //   type: 'SET_USER',
-    //   payload: {
-    //     token,
-    //     username: ''
-    //   }
-    // })
-    navigation.navigate('App') 
+    setLoading(true)
+    console.log(email);
+    if(email == null || email == '' || password == null || password == ''){
+      setLoading(false)
+      Alert.alert(
+        'Debes escribir los datos de ingreso'
+     )
+    }else{
+    const API = `https://api-test.sige-edu.com:8000/api/users/login/`
+    const data = {
+      documentIdUser: email,
+      passwordUser: password
+    };    
+    const options = {
+      headers: {
+          'Content-Type': 'application/json',
+      }
+    };
+    axios.post(API, data, options)
+   .then((res) => {
+     if(res.data.code == 200){
+      Store.save({
+        key: 'userLogin', // Note: Do not use underscore("_") in key!
+        data: res.data.data.user_data.user,
+        expires: 1000 * 3600
+      });
+      setLoading(false)
+      navigation.navigate('App')
+     }
+   })
+   .catch((err) => {
+     console.log("ERROR: ====", err);
+   })
+  }
   }
 
     return (
@@ -44,18 +78,29 @@ const Login = () => {
             style={styles.input}
             placeholder="Documento Identidad"
             placeholderTextColor="white"
+            onChangeText={text => setEmail(text)}
+            defaultValue={email}
           />
           <TextInput
             style={styles.input}
             placeholder="Contraseña"
             placeholderTextColor="white"
             secureTextEntry={true}
+            onChangeText={text => setPassword(text)}
+            defaultValue={password}
           />
           <TouchableOpacity
-            onPress={this.handleLogin}
+            onPress={handleLogin}
             style={styles.button}
           >
-            <Text style={styles.buttonLabel}>Iniciar Sesión</Text>
+            {loading 
+            ? <Spinner
+            visible={true}
+            textContent={'Loading...'}
+            textStyle={styles.spinnerTextStyle}
+            />
+            : <Text style={styles.buttonLabel}>Iniciar Sesión</Text>}
+            
           </TouchableOpacity>                  
         </View>
         <Text style={styles.textByGroupar}>By Groupar</Text>
@@ -82,6 +127,9 @@ const styles = StyleSheet.create({
     marginTop: 30,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  spinnerTextStyle: {
+    color: '#FFF'
   },
   logoliteral:{
     width: 250,

@@ -17,15 +17,7 @@ const AppLayout = (props) => {
   const student_id = 101285
   const API = `https://api-test.sige-edu.com:8000/api/courses/academiccharge/bystudent/${student_id}`
   const { coursesList, loading } = useCoursesStudent(API)
-  const storeData = async (value) => {
-    try {
-      const jsonValue = JSON.stringify(coursesList)
-      await AsyncStorage.setItem('coursesList', jsonValue)
-    } catch (e) {
-      // saving error
-    }
-  }
-  // console.log('JSON.stringify(coursesList)',coursesList);
+
 
     return (
       <Stack.Navigator

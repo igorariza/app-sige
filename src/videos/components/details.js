@@ -59,7 +59,7 @@ const makeHTML = (id) => {
 }
 
 function Details(props) {
-  console.log('props', props.route.params.item.courseDictate.nameCourse);
+  
   return (
     <ScrollView>
       <View style={styles.top}>

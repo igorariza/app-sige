@@ -4,7 +4,7 @@ import {
   FlatList
 } from 'react-native' 
 import Layout from '../components/activity-list-layout'
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import Store from '../../../store'
 import Empty from '../components/empty'
 import Separator from '../components/vertical-separator'
 import Activity from '../components/activity'
@@ -18,16 +18,7 @@ const ActivityList = (props) => {
   viewActivity = (item) => {
     navigation.navigate('Actividad', {item: item}) 
   }
-  // viewMovie = (item) => {
-  //   console.log('navigation.navigate');
-  //   // props.dispatch({
-  //   //   type: 'SET_SELECTED_MOVIE',
-  //   //   payload: {
-  //   //     movie: item,
-  //   //   }
 
-  //   // })
-  // }
   renderItem = ({item}) => {
     return (
     <Activity 
