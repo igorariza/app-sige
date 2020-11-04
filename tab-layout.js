@@ -14,7 +14,7 @@ const TabLayout = () =>{
 
   return(
     <Tab.Navigator
-        initialRouteName="Inicio"
+        initialRouteName="Asignaturas"
         tabBarOptions={{
           activeTintColor: '#e91e63',
           labelStyle: {
@@ -26,16 +26,16 @@ const TabLayout = () =>{
         }}
       >
         <Tab.Screen 
-          name="Inicio" 
+          name="Asignaturas" 
           component={Applayout}
           options={{ 
             tabBarBadge: 3
           }}
         />
-        <Tab.Screen 
+        {/* <Tab.Screen 
           name="Chat"
           component={Chat} />
-        <Tab.Screen name="Perfil" component={Profile} />        
+        <Tab.Screen name="Perfil" component={Profile} />         */}
       </Tab.Navigator> 
   )
 }

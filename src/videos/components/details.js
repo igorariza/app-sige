@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Fragment, useState, useEffect }from 'react';
 import {
   View,
   Text,
   Image,
   StyleSheet,
   ScrollView,
+  FlatList,
 } from 'react-native';
 import { WebView } from 'react-native-webview';
+import Activity from '../../videos/components/activity'
+import Empty from '../components/empty'
+import Separator from '../components/vertical-separator'
 
 const tempImg = [
   'https://images.pexels.com/photos/2170/creative-desk-pens-school.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -59,10 +63,59 @@ const makeHTML = (id) => {
 }
 
 function Details(props) {
+  const [secctions, setSecctions] = useState([])
+  const { codeAcademicCharge } = props.route.params.item
+
+  /* Fetchin data from api */
+  async function getActivities (code) {
+    await fetch(`https://api-test.sige-edu.com:8000/api/secctions/secction/byacademicharge/${code}`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setSecctions(data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+      .finally(() => {})
+  }
   
+  useEffect(() => {
+    getActivities(codeAcademicCharge)
+  }, [])
+  console.log('secctions',secctions);
+  keyExtractor = (item) => item.codeSecction.toString()
+  renderEmpty = () => <Empty text="No hay sugerencias"></Empty>
+  itemSeparator = () => <Separator  />
+  viewSubject = (item) => {
+    // navigation.navigate('Actividad', {item: item}) 
+  }
+  renderItem = ({item}) => {    
+    return (      
+        <Activity          
+          {...item}
+          onPress={() => {viewSubject(item)}}        
+        />  
+    )
+  }
+
   return (
     <ScrollView>
-      <View style={styles.top}>
+      <View>
+      <FlatList
+      keyExtractor={keyExtractor}
+      data={secctions}
+      ListEmptyComponent={renderEmpty}
+      ItemSeparatorComponent={itemSeparator}
+      renderItem={renderItem}
+    />
+      </View>
+      {/* <View style={styles.top}>
   <Text>{props.route.params.item.courseDictate.nameCourse}</Text>
       </View>
       <View style={styles.bottom}>
@@ -80,7 +133,7 @@ function Details(props) {
         <WebView
           source={{html: makeHTML(props.yt_trailer_code ) }}
         />
-      </View>
+      </View> */}
     </ScrollView>
   )
 }

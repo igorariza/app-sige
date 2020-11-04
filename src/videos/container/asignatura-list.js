@@ -1,44 +1,67 @@
-import React, {Component} from 'react';
+import React, { Fragment, useState, useEffect }from 'react';
 import {
-  Text,
   FlatList
 } from 'react-native' 
 import Layout from '../components/asignatura-list-layout'
 import Empty from '../components/empty'
-import Separator from '../../sections/container/horizontal-separator'
+import AsyncStorage from '@react-native-community/async-storage';
+import Separator from '../../videos/components/vertical-separator'
 import Asignatura from '../components/asignatura'
-
-
+import { useNavigation } from '@react-navigation/native';
 
 const AsignaturaList = (props) => {
-  // console.log('key', props.course);
+  const navigation = useNavigation();
+  const [user, setUser] = useState(null)
+  const [subject, setSubject] = useState([])
+  async function loginSuccess(){
+    const dataUser =  await AsyncStorage.getItem('userLogin')
+    getSubject(JSON.parse(dataUser).student.codeStudent)
+  }
+  const getSubject = (codeStudent) => {
+    fetch(`https://api-test.sige-edu.com:8000/api/courses/academiccharge/bystudent/${codeStudent}`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setSubject(data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+      .finally(() => {})
+  }
+ useEffect(() => {
+    loginSuccess()
+    }, [])  
   keyExtractor = (item) => item.codeAcademicCharge.toString()
   renderEmpty = () => <Empty text="No hay sugerencias"></Empty>
   itemSeparator = () => <Separator  />
   viewSubject = (item) => {
-    console.log('key', props);
+    navigation.navigate('Actividad', {item: item}) 
   }
-  renderItem = ({item}) => {
-    
+  renderItem = ({item}) => {    
     return (      
-        <Asignatura 
+        <Asignatura          
           {...item}
-          onPress={() => {this.viewSubject(item)}}        
-        />   
+          onPress={() => {viewSubject(item)}}        
+        />  
     )
   }
     return(
-      <Layout
-      title="Asignaturas">
+    <Layout>
     <FlatList
-      horizontal
-      keyExtractor={this.keyExtractor}
-      data={props.course}
-      ListEmptyComponent={this.renderEmpty}
-      ItemSeparatorComponent={this.itemSeparator}
-      renderItem={this.renderItem}
+      keyExtractor={keyExtractor}
+      data={subject}
+      ListEmptyComponent={renderEmpty}
+      ItemSeparatorComponent={itemSeparator}
+      renderItem={renderItem}
     />
     </Layout>
     )
   }
+
 export default AsignaturaList;

@@ -12,10 +12,10 @@ import { useNavigation } from '@react-navigation/native';
 
 const ActivityList = (props) => {
   const navigation = useNavigation(); 
-  keyExtractor = (item) => item.codeAcademicCharge.toString()
-  renderEmpty = () => <Empty text="No hay sugerencias"></Empty>
-  itemSeparator = () => <Separator  />
-  viewActivity = (item) => {
+  const keyExtractor = (item) => item.codeAcademicCharge.toString()
+  const renderEmpty = () => <Empty text="No hay sugerencias"></Empty>
+  const itemSeparator = () => <Separator  />
+  const viewActivity = (item) => {
     navigation.navigate('Actividad', {item: item}) 
   }
 
@@ -23,7 +23,7 @@ const ActivityList = (props) => {
     return (
     <Activity 
       {...item} 
-      onPress={()=> { this.viewActivity(item)}}
+      onPress={()=> { viewActivity(item)}}
     />
     )
   }
@@ -32,11 +32,11 @@ const ActivityList = (props) => {
       <Layout
       title="Actividades recientes">
     <FlatList
-      keyExtractor={this.keyExtractor}
+      keyExtractor={keyExtractor}
       data={props.course}
-      ListEmptyComponent={this.renderEmpty}
-      ItemSeparatorComponent={this.itemSeparator}
-      renderItem={this.renderItem}
+      ListEmptyComponent={renderEmpty}
+      ItemSeparatorComponent={itemSeparator}
+      renderItem={renderItem}
     />
     </Layout>
     )

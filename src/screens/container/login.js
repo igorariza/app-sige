@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   View,
   Text,
   TextInput,
-  Button,
   StyleSheet,
   SafeAreaView,
   ImageBackground,
@@ -11,55 +10,77 @@ import {
   TouchableOpacity,
   Alert
 } from 'react-native';
-import axios from "axios";
-import Store from '../../../store'
+import AsyncStorage from '@react-native-community/async-storage';
 import Spinner from 'react-native-loading-spinner-overlay';
 import { useNavigation } from '@react-navigation/native';
 
-const Login = () => {
-  
+const Login = () => {  
   const [email, setEmail] = useState()
   const [loading, setLoading] = useState()
   const [password, setPassword] = useState()
-  const navigation = useNavigation(); 
-  
-  handleLogin = () => {
-    setLoading(true)
-    console.log(email);
-    if(email == null || email == '' || password == null || password == ''){
-      setLoading(false)
-      Alert.alert(
-        'Debes escribir los datos de ingreso'
-     )
-    }else{
-    const API = `https://api-test.sige-edu.com:8000/api/users/login/`
-    const data = {
-      documentIdUser: email,
-      passwordUser: password
-    };    
-    const options = {
-      headers: {
-          'Content-Type': 'application/json',
+  const navigation = useNavigation();     
+  const handleLogin = () => {
+      setLoading(true)
+      if(email == null || email == '' || password == null || password == ''){
+          setLoading(false)
+          Alert.alert(
+            'Debes escribir los datos de ingreso'
+          )
+      }else{
+        login( email, password );
       }
-    };
-    axios.post(API, data, options)
-   .then((res) => {
-     if(res.data.code == 200){
-      Store.save({
-        key: 'userLogin', // Note: Do not use underscore("_") in key!
-        data: res.data.data.user_data.user,
-        expires: 1000 * 3600
-      });
-      setLoading(false)
-      navigation.navigate('App')
-     }
-   })
-   .catch((err) => {
-     console.log("ERROR: ====", err);
-   })
   }
+  function login(documentIdUser, passwordUser) {
+    const options = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        documentIdUser: documentIdUser,
+        passwordUser: passwordUser,
+      }),
+    }  
+    return fetch(`https://api-test.sige-edu.com:8000/api/users/login/`, options)
+      .then(handleResponse)
+      .then( response => {        
+        switch(response.code) {          
+          case 204://Datos equivocados
+          Alert.alert(response.message)
+            break;          
+          case 200://Login exitoso
+          loginSuccess(response.data.user_data)
+            break;
+          default:
+            Alert.alert("Algo Sucedió... escríbenos al whatsapp");        
+          } 
+      })
+  }
+  async function loginSuccess(dataUser){
+    await AsyncStorage.setItem('userLogin', JSON.stringify(dataUser))
+    navigation.navigate("Asignaturas");
   }
 
+  function handleResponse(response) {    
+    return response.json().then((data) => {
+      if (!response.ok) {
+        if (response.status === 401) {
+          // auto logout if 401 response returned from api
+          // logout()
+          //eslint-disable-next-line
+          //location.reload(true) recarga la direccion, mejor cambiar por un push
+        }  
+        const error = data.message || response.statusText || 'Error mostro'
+        return Promise.reject(error)
+      }  
+      if (response.ok) {
+        if (data.code !== 200) {          
+          // logout()
+          // const error = data.message || response.statusText || 'Error mostro'
+          // return Promise.reject(error)
+        }
+      }  
+      return data
+    })
+  }  
     return (
       <ImageBackground 
           source={require('../../../assets/backgronund.png')} 
@@ -86,12 +107,12 @@ const Login = () => {
             placeholder="Contraseña"
             placeholderTextColor="white"
             secureTextEntry={true}
-            onChangeText={text => setPassword(text)}
-            defaultValue={password}
+            onChangeText={ text => setPassword(text) }
+            defaultValue={ password }
           />
           <TouchableOpacity
-            onPress={handleLogin}
-            style={styles.button}
+            onPress={ handleLogin }
+            style={ styles.button }
           >
             {loading 
             ? <Spinner
@@ -108,7 +129,6 @@ const Login = () => {
       </ImageBackground>
     )
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

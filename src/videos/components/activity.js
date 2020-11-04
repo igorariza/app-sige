@@ -35,7 +35,7 @@ const tempImg = [
 function Asignatura(props) {
   return (
     <TouchableOpacity
-      onPress={props.onPress}
+      // onPress={props.onPress}
     >
     <View style={styles.container}>
       <View style={styles.left}>
@@ -46,12 +46,12 @@ function Asignatura(props) {
           }}
         />
         <View style={styles.genre}>
-          <Text style={styles.genreText}>{props.teacherDictate.user.firstNameUser}</Text>
+          <Text style={styles.genreText}>{'props.teacherDictate.user.firstNameUser'}</Text>
         </View>
       </View>
 
       <View style={styles.right}>
-        <Text style={styles.title}>{props.courseDictate.nameCourse}</Text>
+        <Text style={styles.title}>{'props.courseDictate.nameCourse'}</Text>
         <Text style={styles.year}>2007</Text>
         <Text style={styles.rating}>0 Actividades</Text>
       </View>

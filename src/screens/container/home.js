@@ -4,52 +4,21 @@ import {
   TouchableOpacity,
   StyleSheet
 } from 'react-native';
-import useCoursesStudent from '../../../utils/hooks/useCoursesStudent'
 import Store from '../../../store'
+import AsyncStorage from '@react-native-community/async-storage';
 import Header from '../../sections/components/header'
 import AsignaturaList from '../../videos/container/asignatura-list'
 import ActivityList from '../../videos/container/activity-list'
-import Close from '../../sections/components/close'
 import { useNavigation } from '@react-navigation/native';
 
 const Home = (props) => {
-  const [user, setUser] = useState()
   const navigation = useNavigation(); 
-  const student_id = 101285
-  const API = `https://api-test.sige-edu.com:8000/api/courses/academiccharge/bystudent/${student_id}`
-  const { coursesList, loading } = useCoursesStudent(API)
-  handleClose = () => {
+  const handleClose = () => {
+    Store.remove({
+      key: 'userLogin'
+    });
     navigation.navigate('Login')
   }
-  // load
-  Store.load({
-  key: 'userLogin',
-  autoSync: true,
-  syncInBackground: true,
-  syncParams: {
-    extraFetchOptions: {
-      // blahblah
-    },
-    someFlag: true
-  }
-})
-.then(ret => {
-  setUser(ret)
-})
-.catch(err => {
-  // any exception including data not found
-  // goes to catch()
-  console.warn(err.message);
-  switch (err.name) {
-    case 'NotFoundError':
-      // TODO;
-      break;
-    case 'ExpiredError':
-      // TODO
-      break;
-  }
-});
-console.log('user', user);
     return (
       <Fragment>     
         <Header>
@@ -59,24 +28,30 @@ console.log('user', user);
           >
             <Text style={styles.buttonLabel}>Cerrar Sesión</Text>
           </TouchableOpacity>
-          {/* <Close
-            onPress={this.handleClose} /> */}
         </Header>
-        <Text>{user.firstNameUser} - Grado </Text>
-        <AsignaturaList course={coursesList}/>
-        <ActivityList course={coursesList}/>
+        <AsignaturaList />
+        {/* <ActivityList /> */}
       </Fragment>
     )
 }
 const styles = StyleSheet.create({
   button: {
+    backgroundColor: '#e350a8',
+    borderRadius: 5,
+  },
+  txtusername: {
     backgroundColor: '#99c84a',
     borderRadius: 5,
+    color: 'white',
+    padding: 5,
+    fontSize: 15,
+    fontWeight: 'bold',
+    textAlign: 'center'
   },
   buttonLabel: {
     color: 'white',
     padding: 5,
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center'
   }

@@ -18,7 +18,7 @@ function App(props) {
 }
 const SwitchNavigator = createSwitchNavigator({
   "Loading": { screen: Loading, },
-  "App": TabLayout,
+  "Asignaturas": TabLayout,
   "Login": Login,
 },
 {
