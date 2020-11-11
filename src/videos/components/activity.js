@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
+import { Card, ListItem, Button, Icon } from 'react-native-elements'
 import {
+  Modal,
   View,
   Image,
   Text,
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
+import moment from 'moment';
 const tempImg = [
   'https://images.pexels.com/photos/2170/creative-desk-pens-school.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   'https://images.pexels.com/photos/1053687/pexels-photo-1053687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -32,13 +35,21 @@ const tempImg = [
   'https://images.pexels.com/photos/632470/pexels-photo-632470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 ]
 
-function Asignatura(props) {
+function Asignatura(props) { 
+  console.log('props', props);
+  moment.locale('en');
+  const [colapse, setColapse] = useState(false)
+  const [modal, setModal] = useState(false)
+  const [titleModal, setTitleModal] = useState('')
+  const toggleModal = () => setModal(!modal)
+  const toggleColapse = () => setColapse(!colapse)
   return (
     <TouchableOpacity
       // onPress={props.onPress}
     >
     <View style={styles.container}>
       <View style={styles.left}>
+      <Card style={styles.card}>
         <Image
           style={styles.cover}
           source={{
@@ -46,14 +57,18 @@ function Asignatura(props) {
           }}
         />
         <View style={styles.genre}>
-          <Text style={styles.genreText}>{'props.teacherDictate.user.firstNameUser'}</Text>
+          <Text style={styles.genreText}>{props.nameSecction}</Text>
         </View>
-      </View>
 
       <View style={styles.right}>
-        <Text style={styles.title}>{'props.courseDictate.nameCourse'}</Text>
+        <Text style={styles.title}>Fecha asignación{' '}
+                {moment(props.uploadOnSecction).format('MMMM DD')}</Text>
         <Text style={styles.year}>2007</Text>
-        <Text style={styles.rating}>0 Actividades</Text>
+        {/* <Text style={styles.rating}>0 Actividades</Text> */}
+        </View>
+       
+    </Card>
+        
       </View>
     </View>
     </TouchableOpacity>
@@ -63,6 +78,9 @@ function Asignatura(props) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+  },
+  card: {
+    width: 1000,
   },
   genre: {
     position: 'absolute',

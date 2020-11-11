@@ -63,6 +63,7 @@ const makeHTML = (id) => {
 }
 
 function Details(props) {
+  console.log('props..detail', props);
   const [secctions, setSecctions] = useState([])
   const { codeAcademicCharge } = props.route.params.item
 
