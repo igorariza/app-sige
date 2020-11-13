@@ -36,7 +36,6 @@ const tempImg = [
 ]
 
 function Asignatura(props) { 
-  console.log('props', props);
   moment.locale('en');
   const [colapse, setColapse] = useState(false)
   const [modal, setModal] = useState(false)
@@ -44,69 +43,56 @@ function Asignatura(props) {
   const toggleModal = () => setModal(!modal)
   const toggleColapse = () => setColapse(!colapse)
   return (
-    <TouchableOpacity
-      // onPress={props.onPress}
-    >
-    <View style={styles.container}>
-      <View style={styles.left}>
-      <Card style={styles.card}>
-        <Image
-          style={styles.cover}
-          source={{
-            uri: tempImg[Math.floor(Math.random() * 20)]
-          }}
-        />
-        <View style={styles.genre}>
-          <Text style={styles.genreText}>{props.nameSecction}</Text>
+      <Card containerStyle={{borderRadius: 10}} >        
+        <View style={styles.midlecard}>
+          <Image
+            style={styles.cover}
+            source={{
+              uri: tempImg[Math.floor(Math.random() * 20)]
+            }}
+          />
+          <View style={styles.info}>
+            <Text style={styles.title}>{props.nameSecction}</Text>
+            <Text style={styles.title}>Asignación:{' '}
+                  {moment(props.uploadOnSecction).format('MMMM DD')}</Text>
+          </View>
         </View>
-
-      <View style={styles.right}>
-        <Text style={styles.title}>Fecha asignación{' '}
-                {moment(props.uploadOnSecction).format('MMMM DD')}</Text>
-        <Text style={styles.year}>2007</Text>
-        {/* <Text style={styles.rating}>0 Actividades</Text> */}
-        </View>
-       
-    </Card>
-        
-      </View>
-    </View>
-    </TouchableOpacity>
+      </Card>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
+  midlecard:{
     flexDirection: 'row',
   },
-  card: {
-    width: 1000,
+  info: {
+    width: 0,
+    flexGrow: 1,    
   },
-  genre: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    backgroundColor: 'black',
-    paddingVertical: 5,
-    paddingHorizontal: 7,
+  card: {
+    borderRadius: 50,
+  },
+  title: {
+    flex: 1, 
+    flexWrap: 'wrap',
+    fontSize: 18,
+    paddingLeft: 10,
   },
   genreText: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
     color: 'white',
     fontSize: 11,
-
   },
   cover: {
-    height: 150,
+    height: 100,
     width: 100,
-    resizeMode: 'contain'
+    borderRadius: 5,
   },
   right: {
     paddingLeft: 10,
     justifyContent: 'space-between',
-  },
-  title: {
-    fontSize: 18,
-    color: '#44546b'
   },
   year: {
     backgroundColor: '#70b124',
@@ -117,13 +103,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     overflow: 'hidden',
     alignSelf: 'flex-start'
-  },
-  rating: {
-    color: '#6b6b6b',
-    fontSize: 14,
-    fontWeight: 'bold',
   }
-
 })
 
 export default Asignatura;
