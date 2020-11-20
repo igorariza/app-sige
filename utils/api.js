@@ -1,4 +1,4 @@
-const BASE_API = 'https://api-test.sige-edu.com:8000/api/';
+const BASE_API = 'https://api-gcp.sige-edu.com:8000/api/';
 
 class Api {
   async getSubject(id) {

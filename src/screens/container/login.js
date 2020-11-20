@@ -39,7 +39,7 @@ const Login = () => {
         passwordUser: passwordUser,
       }),
     }  
-    return fetch(`https://api-test.sige-edu.com:8000/api/users/login/`, options)
+    return fetch(`https://api-gcp.sige-edu.com:8000/api/users/login/`, options)
       .then(handleResponse)
       .then( response => {        
         switch(response.code) {          

@@ -18,7 +18,7 @@ const AsignaturaList = (props) => {
     getSubject(JSON.parse(dataUser).student.codeStudent)
   }
   const getSubject = (codeStudent) => {
-    fetch(`https://api-test.sige-edu.com:8000/api/courses/academiccharge/bystudent/${codeStudent}`, {
+    fetch(`https://api-gcp.sige-edu.com:8000/api/courses/academiccharge/bystudent/${codeStudent}`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',

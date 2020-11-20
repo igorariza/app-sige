@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Card, ListItem, Button, Icon } from 'react-native-elements'
 import {
-  Modal,
   View,
   Image,
   Text,
   StyleSheet,
   TouchableOpacity,
+  SafeAreaView,
 } from 'react-native';
+import Modal from 'react-native-modal';
 import moment from 'moment';
 const tempImg = [
   'https://images.pexels.com/photos/2170/creative-desk-pens-school.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -38,11 +39,22 @@ const tempImg = [
 function Asignatura(props) { 
   moment.locale('en');
   const [colapse, setColapse] = useState(false)
-  const [modal, setModal] = useState(false)
   const [titleModal, setTitleModal] = useState('')
-  const toggleModal = () => setModal(!modal)
   const toggleColapse = () => setColapse(!colapse)
+  const [isModalVisible, setModalVisible] = useState(false);  
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
   return (
+    <SafeAreaView>
+    <View>
+      <Modal isVisible={isModalVisible}>
+          <View style={{flex: 1}}>
+          <Text style={styles.title}>{props.nameSecction}</Text>
+
+            <Button title="Hide modal" onPress={toggleModal} />
+          </View>
+        </Modal>
       <Card containerStyle={{borderRadius: 10}} >        
         <View style={styles.midlecard}>
           <Image
@@ -57,13 +69,28 @@ function Asignatura(props) {
                   {moment(props.uploadOnSecction).format('MMMM DD')}</Text>
           </View>
         </View>
-      </Card>
+        <Text style={styles.title}>{props.descriptionSecction}</Text>
+        <TouchableOpacity
+            onPress={toggleModal}
+            style={ styles.button }
+          >
+            <Text style={styles.buttonLabel}>Hacer Entrega</Text>
+            
+          </TouchableOpacity>  
+      </Card>      
+      </View>
+      </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
   midlecard:{
     flexDirection: 'row',
+  },
+  button: {
+    backgroundColor: '#99c84a',
+    borderRadius: 5,
+    marginTop: 20,
   },
   info: {
     width: 0,
@@ -78,31 +105,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     paddingLeft: 10,
   },
-  genreText: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: 'white',
-    fontSize: 11,
-  },
   cover: {
     height: 100,
     width: 100,
     borderRadius: 5,
   },
-  right: {
-    paddingLeft: 10,
-    justifyContent: 'space-between',
-  },
-  year: {
-    backgroundColor: '#70b124',
-    paddingVertical: 4,
-    paddingHorizontal: 6,
+  buttonLabel: {
     color: 'white',
-    fontSize: 11,
-    borderRadius: 5,
-    overflow: 'hidden',
-    alignSelf: 'flex-start'
+    padding: 10,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center'
   }
 })
 

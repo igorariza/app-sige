@@ -69,7 +69,7 @@ function Details(props) {
 
   /* Fetchin data from api */
   async function getActivities (code) {
-    await fetch(`https://api-test.sige-edu.com:8000/api/secctions/secction/byacademicharge/${code}`, {
+    await fetch(`https://api-gcp.sige-edu.com:8000/api/secctions/secction/byacademicharge/${code}`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',

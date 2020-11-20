@@ -11,7 +11,6 @@
     "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "^1.13.1",
     "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.10.0",
@@ -22,10 +21,11 @@
     "moment": "^2.29.1",
     "native-base": "^2.13.14",
     "react": "16.13.1",
-    "react-native": "0.63.2",
+    "react-native": "0.63.3",
     "react-native-elements": "^3.0.0-alpha.1",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-loading-spinner-overlay": "^2.0.0",
+    "react-native-modal": "^11.5.6",
     "react-native-navigation-redux-integration": "^0.5.1",
     "react-native-reanimated": "^1.13.1",
     "react-native-safe-area-context": "^3.1.8",
