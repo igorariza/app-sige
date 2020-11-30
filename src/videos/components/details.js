@@ -1,13 +1,10 @@
-import React, { Fragment, useState, useEffect }from 'react';
+import React, { useState, useEffect }from 'react';
 import {
   View,
-  Text,
-  Image,
   StyleSheet,
   ScrollView,
   FlatList,
 } from 'react-native';
-import { WebView } from 'react-native-webview';
 import Activity from '../../videos/components/activity'
 import Empty from '../components/empty'
 import Separator from '../components/vertical-separator'
@@ -90,13 +87,13 @@ function Details(props) {
     getActivities(codeAcademicCharge)
   }, [])
   console.log('secctions',secctions);
-  keyExtractor = (item) => item.codeSecction.toString()
-  renderEmpty = () => <Empty text="No hay sugerencias"></Empty>
-  itemSeparator = () => <Separator  />
-  viewSubject = (item) => {
+  let keyExtractor = (item) => item.codeSecction.toString()
+  let renderEmpty = () => <Empty text="No hay sugerencias"></Empty>
+  let itemSeparator = () => <Separator  />
+  let viewSubject = (item) => {
     // navigation.navigate('Actividad', {item: item}) 
   }
-  renderItem = ({item}) => {    
+  let renderItem = ({item}) => {    
     return (      
         <Activity          
           {...item}

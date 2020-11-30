@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Card, ListItem, Button, Icon } from 'react-native-elements'
+import React, { useState } from 'react'
+import { Card, Button } from 'react-native-elements'
 import {
   View,
   Image,
@@ -7,9 +7,11 @@ import {
   StyleSheet,
   TouchableOpacity,
   SafeAreaView,
+  TextInput,
 } from 'react-native';
 import Modal from 'react-native-modal';
 import moment from 'moment';
+import Close from '../../sections/components/close'
 const tempImg = [
   'https://images.pexels.com/photos/2170/creative-desk-pens-school.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   'https://images.pexels.com/photos/1053687/pexels-photo-1053687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -38,9 +40,6 @@ const tempImg = [
 
 function Asignatura(props) { 
   moment.locale('en');
-  const [colapse, setColapse] = useState(false)
-  const [titleModal, setTitleModal] = useState('')
-  const toggleColapse = () => setColapse(!colapse)
   const [isModalVisible, setModalVisible] = useState(false);  
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
@@ -48,10 +47,20 @@ function Asignatura(props) {
   return (
     <SafeAreaView>
     <View>
-      <Modal isVisible={isModalVisible}>
-          <View style={{flex: 1}}>
-          <Text style={styles.title}>{props.nameSecction}</Text>
-
+      <Modal style={styles.modalbox} isVisible={isModalVisible}>
+          <Close style={styles.closemodal} onPress={toggleModal} />
+          <View style={styles.containermodal}>            
+            <Text style={styles.title}>{props.nameSecction}</Text>
+            <View style={styles.textAreaContainer} >
+            <TextInput
+              style={styles.textArea}
+              underlineColorAndroid="transparent"
+              placeholder="Escribe lo que necesites contarle a tu profe..."
+              placeholderTextColor="black"
+              numberOfLines={10}
+              multiline={true}
+            />
+          </View>
             <Button title="Hide modal" onPress={toggleModal} />
           </View>
         </Modal>
@@ -87,6 +96,20 @@ const styles = StyleSheet.create({
   midlecard:{
     flexDirection: 'row',
   },
+  closemodal:{
+    marginTop: 45,
+  },
+  containermodal:{
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  modalbox:{
+    backgroundColor: '#99c84a',
+    marginTop: 100,
+    marginBottom: 100,
+    borderRadius: 10,
+  },
   button: {
     backgroundColor: '#99c84a',
     borderRadius: 5,
@@ -102,8 +125,7 @@ const styles = StyleSheet.create({
   title: {
     flex: 1, 
     flexWrap: 'wrap',
-    fontSize: 18,
-    paddingLeft: 10,
+    fontSize: 20,
   },
   cover: {
     height: 100,
@@ -116,6 +138,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center'
+  },
+  textAreaContainer: {
+    borderColor: 'white',
+    borderWidth: 1,
+    padding: 5
+  },
+  textArea: {
+    height: 150,
+    justifyContent: "flex-start"
   }
 })
 

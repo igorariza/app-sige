@@ -1,14 +1,12 @@
-import React, { Fragment, useState, useEffect }from 'react';
+import React, { Fragment}from 'react';
 import {
   Text,
   TouchableOpacity,
   StyleSheet
 } from 'react-native';
 import Store from '../../../store'
-import AsyncStorage from '@react-native-community/async-storage';
 import Header from '../../sections/components/header'
 import AsignaturaList from '../../videos/container/asignatura-list'
-import ActivityList from '../../videos/container/activity-list'
 import { useNavigation } from '@react-navigation/native';
 
 const Home = (props) => {
