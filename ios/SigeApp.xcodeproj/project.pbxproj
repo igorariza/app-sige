@@ -7,22 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		007A29987113BB301603E3A4 /* libPods-SigeApp-SigeAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DED594D59A7452E996E1B09 /* libPods-SigeApp-SigeAppTests.a */; };
 		00E356F31AD99517003FC87E /* SigeAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SigeAppTests.m */; };
+		032591EFE97B4BF9A5F95BC6 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3472C13C0B2F45FD926518E7 /* Zocial.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		24F92C00F5B3409398BC9880 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7EE0EF6A37042BE8DC40C7A /* Roboto.ttf */; };
+		253604DC89444CAB8F6B90F4 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E342A593A04BFB9DF69955 /* FontAwesome5_Brands.ttf */; };
 		2B0DB98A16534666B3CBF3DE /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4D196EA3DC84AA1A1315316 /* rubicon-icon-font.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* SigeAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SigeAppTests.m */; };
-		3CBC7B1538354551FDF269F2 /* libPods-SigeApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9B71B2607957EB7F1B83DC /* libPods-SigeApp-tvOSTests.a */; };
+		2F38FDC0CD74B63D72AB0A0D /* libPods-SigeApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB155776DFEB7C45A9774A3 /* libPods-SigeApp-tvOS.a */; };
+		2F91D6DBC66F4D618DDCD13D /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57E65DA0A04A4009A3353CB3 /* AntDesign.ttf */; };
+		31C57D8807E94B18B12A30BB /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF60BD365E4C41DAA72575A3 /* Fontisto.ttf */; };
+		352F2510E67F477C94504E6F /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A24CAE6D7D3346288B923F07 /* SimpleLineIcons.ttf */; };
+		3B505FA1C48F4A1EBD32ACDC /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5349E8D5ACA543CCA9545F1F /* Foundation.ttf */; };
+		3FAF9F0A7505351031B343F8 /* libPods-SigeApp-SigeAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3935F45EC47B1BB4993E78 /* libPods-SigeApp-SigeAppTests.a */; };
+		42D2F2FEDB424024D7F904F4 /* libPods-SigeApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D5209321980BBC67945FD4 /* libPods-SigeApp.a */; };
+		6A3C1D1BCDF1490BA8ACE55C /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F618E43E5B994871902F8092 /* FontAwesome5_Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		835BB94997EA47DBB6D1F142 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B874EE7FC4821B53F97E3 /* MaterialIcons.ttf */; };
+		880D5AA206F145159A358A71 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FDA0BAB975E478C8BD964D0 /* Octicons.ttf */; };
+		9A6989F232A442C8BD6B34BE /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 823296FC56EF40C48EE44A3E /* FontAwesome.ttf */; };
 		9F7EC3D2DB424450A328E037 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DB0E88F5EF1448E97253F81 /* Roboto_medium.ttf */; };
-		A02DCE3AF1F8F7B4F3F1784D /* libPods-SigeApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421AA23CD96F4633106ACB97 /* libPods-SigeApp-tvOS.a */; };
-		CA13A0C0788A6F541418A3D9 /* libPods-SigeApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7999E7FA2126234D3AF9648 /* libPods-SigeApp.a */; };
+		BC156B37FFF84446B9FC4800 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABE287F65C4448BF930170AA /* Entypo.ttf */; };
+		BC54E133BCB642578D45F5D0 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC3A4007BF2E453285D54FA1 /* MaterialCommunityIcons.ttf */; };
+		C2319264AC0F236E5772D6B9 /* libPods-SigeApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 145D0C4308024152990C9CF0 /* libPods-SigeApp-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,48 +59,60 @@
 		00E356EE1AD99517003FC87E /* SigeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SigeAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigeAppTests.m; sourceTree = "<group>"; };
-		057AF99F919495D3BE52EFBA /* Pods-SigeApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SigeApp-tvOS/Pods-SigeApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		04E342A593A04BFB9DF69955 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SigeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SigeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SigeApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SigeApp/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SigeApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SigeApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SigeApp/main.m; sourceTree = "<group>"; };
-		1C9B71B2607957EB7F1B83DC /* libPods-SigeApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SigeApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		26628227C6D4FF7B103075FE /* Pods-SigeApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-SigeApp-tvOS/Pods-SigeApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		145D0C4308024152990C9CF0 /* libPods-SigeApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SigeApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D94E7EE6BBBB8FD021874D7 /* Pods-SigeApp-SigeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-SigeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SigeApp-SigeAppTests/Pods-SigeApp-SigeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C681858490946F9837D729B /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* SigeApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SigeApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* SigeApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SigeApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DD588E96AC59AFC9BB456DF /* Pods-SigeApp-SigeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-SigeAppTests.release.xcconfig"; path = "Target Support Files/Pods-SigeApp-SigeAppTests/Pods-SigeApp-SigeAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		421AA23CD96F4633106ACB97 /* libPods-SigeApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SigeApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DED594D59A7452E996E1B09 /* libPods-SigeApp-SigeAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SigeApp-SigeAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D18519927FAD192F2C09A4A /* Pods-SigeApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SigeApp-tvOSTests/Pods-SigeApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		5DC782783989DBD84D88756F /* Pods-SigeApp-SigeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-SigeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SigeApp-SigeAppTests/Pods-SigeApp-SigeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		709E5735BA14FE7F68C1BAD5 /* Pods-SigeApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SigeApp-tvOSTests/Pods-SigeApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3472C13C0B2F45FD926518E7 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		3A3935F45EC47B1BB4993E78 /* libPods-SigeApp-SigeAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SigeApp-SigeAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A5B874EE7FC4821B53F97E3 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		3BFDA713BBD2B2A659EB0985 /* Pods-SigeApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SigeApp-tvOS/Pods-SigeApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4FDA0BAB975E478C8BD964D0 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		5349E8D5ACA543CCA9545F1F /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		57E65DA0A04A4009A3353CB3 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		617FF7F8EE70746B6ED8B149 /* Pods-SigeApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-SigeApp-tvOS/Pods-SigeApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		67B1FDD7000359155E5359B1 /* Pods-SigeApp-SigeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-SigeAppTests.release.xcconfig"; path = "Target Support Files/Pods-SigeApp-SigeAppTests/Pods-SigeApp-SigeAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		6BB155776DFEB7C45A9774A3 /* libPods-SigeApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SigeApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		736C6301A6214DE0801E1F3C /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		7CDA79089D00502FC898E7AB /* Pods-SigeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp.debug.xcconfig"; path = "Target Support Files/Pods-SigeApp/Pods-SigeApp.debug.xcconfig"; sourceTree = "<group>"; };
-		7FA14C7E11CDB54E61F658BF /* Pods-SigeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp.release.xcconfig"; path = "Target Support Files/Pods-SigeApp/Pods-SigeApp.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SigeApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		823296FC56EF40C48EE44A3E /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		8BCD9B98A7EC4BDA89E7F90C /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		8DB0E88F5EF1448E97253F81 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
+		9500DBB438623697B8B4DA17 /* Pods-SigeApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SigeApp-tvOSTests/Pods-SigeApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		99404489F9D4412F85C0E42C /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		A24CAE6D7D3346288B923F07 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		A47BDA84D7704F179190611F /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		A719D8B2076A4C5D95F3A70D /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		A7999E7FA2126234D3AF9648 /* libPods-SigeApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SigeApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EE0EF6A37042BE8DC40C7A /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		A811D472ABC147C0AB2FF611 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		A8D5209321980BBC67945FD4 /* libPods-SigeApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SigeApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE287F65C4448BF930170AA /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		BA818620E70B41BDA1A55413 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		BC62712D8DBE4578B65381C4 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		C0D9B5BA0F8E4BF59A1BC3C1 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		C2BACB024D804968856346CE /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		C4D196EA3DC84AA1A1315316 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		D9EC9637A10E4BFDA0622522 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		DA3A52B4615DA1934FD5265B /* Pods-SigeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp.release.xcconfig"; path = "Target Support Files/Pods-SigeApp/Pods-SigeApp.release.xcconfig"; sourceTree = "<group>"; };
 		E14B3A3038F643BA87B322EB /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EE521CB199504A9B91A619ED /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		EFB42DD3AA9003A40F42CF57 /* Pods-SigeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp.debug.xcconfig"; path = "Target Support Files/Pods-SigeApp/Pods-SigeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F3060B59D8F2499BBAA6AFD5 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		F39467AA28AA4A1393081529 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		F618E43E5B994871902F8092 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		FC3A4007BF2E453285D54FA1 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		FD5F99F53F19EFEA7C9634E7 /* Pods-SigeApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SigeApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SigeApp-tvOSTests/Pods-SigeApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF60BD365E4C41DAA72575A3 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				007A29987113BB301603E3A4 /* libPods-SigeApp-SigeAppTests.a in Frameworks */,
+				3FAF9F0A7505351031B343F8 /* libPods-SigeApp-SigeAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA13A0C0788A6F541418A3D9 /* libPods-SigeApp.a in Frameworks */,
+				42D2F2FEDB424024D7F904F4 /* libPods-SigeApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A02DCE3AF1F8F7B4F3F1784D /* libPods-SigeApp-tvOS.a in Frameworks */,
+				2F38FDC0CD74B63D72AB0A0D /* libPods-SigeApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CBC7B1538354551FDF269F2 /* libPods-SigeApp-tvOSTests.a in Frameworks */,
+				C2319264AC0F236E5772D6B9 /* libPods-SigeApp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,12 +187,28 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				A7999E7FA2126234D3AF9648 /* libPods-SigeApp.a */,
-				4DED594D59A7452E996E1B09 /* libPods-SigeApp-SigeAppTests.a */,
-				421AA23CD96F4633106ACB97 /* libPods-SigeApp-tvOS.a */,
-				1C9B71B2607957EB7F1B83DC /* libPods-SigeApp-tvOSTests.a */,
+				A8D5209321980BBC67945FD4 /* libPods-SigeApp.a */,
+				3A3935F45EC47B1BB4993E78 /* libPods-SigeApp-SigeAppTests.a */,
+				6BB155776DFEB7C45A9774A3 /* libPods-SigeApp-tvOS.a */,
+				145D0C4308024152990C9CF0 /* libPods-SigeApp-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DBD6A023E1ECD02F08E547D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFB42DD3AA9003A40F42CF57 /* Pods-SigeApp.debug.xcconfig */,
+				DA3A52B4615DA1934FD5265B /* Pods-SigeApp.release.xcconfig */,
+				1D94E7EE6BBBB8FD021874D7 /* Pods-SigeApp-SigeAppTests.debug.xcconfig */,
+				67B1FDD7000359155E5359B1 /* Pods-SigeApp-SigeAppTests.release.xcconfig */,
+				3BFDA713BBD2B2A659EB0985 /* Pods-SigeApp-tvOS.debug.xcconfig */,
+				617FF7F8EE70746B6ED8B149 /* Pods-SigeApp-tvOS.release.xcconfig */,
+				FD5F99F53F19EFEA7C9634E7 /* Pods-SigeApp-tvOSTests.debug.xcconfig */,
+				9500DBB438623697B8B4DA17 /* Pods-SigeApp-tvOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -186,8 +226,8 @@
 				00E356EF1AD99517003FC87E /* SigeAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				DEE36098E41086C907A86F23 /* Pods */,
 				E406B4F4C4E74502A630CB8F /* Resources */,
+				6DBD6A023E1ECD02F08E547D /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -203,22 +243,6 @@
 				2D02E4901E0B4A5D006451C7 /* SigeApp-tvOSTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		DEE36098E41086C907A86F23 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7CDA79089D00502FC898E7AB /* Pods-SigeApp.debug.xcconfig */,
-				7FA14C7E11CDB54E61F658BF /* Pods-SigeApp.release.xcconfig */,
-				5DC782783989DBD84D88756F /* Pods-SigeApp-SigeAppTests.debug.xcconfig */,
-				3DD588E96AC59AFC9BB456DF /* Pods-SigeApp-SigeAppTests.release.xcconfig */,
-				057AF99F919495D3BE52EFBA /* Pods-SigeApp-tvOS.debug.xcconfig */,
-				26628227C6D4FF7B103075FE /* Pods-SigeApp-tvOS.release.xcconfig */,
-				709E5735BA14FE7F68C1BAD5 /* Pods-SigeApp-tvOSTests.debug.xcconfig */,
-				5D18519927FAD192F2C09A4A /* Pods-SigeApp-tvOSTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		E406B4F4C4E74502A630CB8F /* Resources */ = {
@@ -243,6 +267,18 @@
 				8DB0E88F5EF1448E97253F81 /* Roboto_medium.ttf */,
 				A7EE0EF6A37042BE8DC40C7A /* Roboto.ttf */,
 				C4D196EA3DC84AA1A1315316 /* rubicon-icon-font.ttf */,
+				57E65DA0A04A4009A3353CB3 /* AntDesign.ttf */,
+				ABE287F65C4448BF930170AA /* Entypo.ttf */,
+				823296FC56EF40C48EE44A3E /* FontAwesome.ttf */,
+				04E342A593A04BFB9DF69955 /* FontAwesome5_Brands.ttf */,
+				F618E43E5B994871902F8092 /* FontAwesome5_Regular.ttf */,
+				FF60BD365E4C41DAA72575A3 /* Fontisto.ttf */,
+				5349E8D5ACA543CCA9545F1F /* Foundation.ttf */,
+				FC3A4007BF2E453285D54FA1 /* MaterialCommunityIcons.ttf */,
+				3A5B874EE7FC4821B53F97E3 /* MaterialIcons.ttf */,
+				4FDA0BAB975E478C8BD964D0 /* Octicons.ttf */,
+				A24CAE6D7D3346288B923F07 /* SimpleLineIcons.ttf */,
+				3472C13C0B2F45FD926518E7 /* Zocial.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -255,11 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SigeAppTests" */;
 			buildPhases = (
-				6327DD5C7F94EE874B729D29 /* [CP] Check Pods Manifest.lock */,
+				F75273904D542FDD14E579DC /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				08C2C24A9F3F43D588ED1CC3 /* [CP] Copy Pods Resources */,
+				5F2A0AFC2CE62B4A82DE19E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,13 +311,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SigeApp" */;
 			buildPhases = (
-				E10A47D56252ADF4884F9243 /* [CP] Check Pods Manifest.lock */,
+				95D6202711FB575B3960EDFE /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				93513D5CEA99C6B4305562B8 /* [CP] Copy Pods Resources */,
+				9060ABC854CC6AADE9C617FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,7 +332,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SigeApp-tvOS" */;
 			buildPhases = (
-				14A29DE8060DD9849ED59DDF /* [CP] Check Pods Manifest.lock */,
+				66D49A801478E728CBEE374D /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -316,7 +352,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SigeApp-tvOSTests" */;
 			buildPhases = (
-				D3954E03B2EC36D515B8E561 /* [CP] Check Pods Manifest.lock */,
+				6AF00D2EEF2A18D24692A405 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -392,25 +428,21 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				0AAE25AC11654ABFBBB717E5 /* AntDesign.ttf in Resources */,
-				7A61930B628449FEB3E1EBCE /* Entypo.ttf in Resources */,
-				73ED01393A5F4BD7A15ACEDF /* EvilIcons.ttf in Resources */,
-				699E8ADD127241CDA4422F15 /* Feather.ttf in Resources */,
-				17B395E0AE8F4464BAE5B164 /* FontAwesome.ttf in Resources */,
-				C522D7EBA32A475AA603FF23 /* FontAwesome5_Brands.ttf in Resources */,
-				21C566045CC940EBB7FBB25F /* FontAwesome5_Regular.ttf in Resources */,
-				2B79CFFAA12146B29311A94E /* FontAwesome5_Solid.ttf in Resources */,
-				BA2CF9EAE731482FA3253932 /* Fontisto.ttf in Resources */,
-				42BEB7251A864177801B288F /* Foundation.ttf in Resources */,
-				5704145FCA6B4E719491CF2E /* Ionicons.ttf in Resources */,
-				BF0EB2CF12D04BC483E56C25 /* MaterialCommunityIcons.ttf in Resources */,
-				20AE2827010E4ECB9CE6819A /* MaterialIcons.ttf in Resources */,
-				76F0532088D749138F8ACAD6 /* Octicons.ttf in Resources */,
 				9F7EC3D2DB424450A328E037 /* Roboto_medium.ttf in Resources */,
 				24F92C00F5B3409398BC9880 /* Roboto.ttf in Resources */,
 				2B0DB98A16534666B3CBF3DE /* rubicon-icon-font.ttf in Resources */,
-				97EF7470712E43279845B85E /* SimpleLineIcons.ttf in Resources */,
-				836AC1F6CECC43A993962B51 /* Zocial.ttf in Resources */,
+				2F91D6DBC66F4D618DDCD13D /* AntDesign.ttf in Resources */,
+				BC156B37FFF84446B9FC4800 /* Entypo.ttf in Resources */,
+				9A6989F232A442C8BD6B34BE /* FontAwesome.ttf in Resources */,
+				253604DC89444CAB8F6B90F4 /* FontAwesome5_Brands.ttf in Resources */,
+				6A3C1D1BCDF1490BA8ACE55C /* FontAwesome5_Regular.ttf in Resources */,
+				31C57D8807E94B18B12A30BB /* Fontisto.ttf in Resources */,
+				3B505FA1C48F4A1EBD32ACDC /* Foundation.ttf in Resources */,
+				BC54E133BCB642578D45F5D0 /* MaterialCommunityIcons.ttf in Resources */,
+				835BB94997EA47DBB6D1F142 /* MaterialIcons.ttf in Resources */,
+				880D5AA206F145159A358A71 /* Octicons.ttf in Resources */,
+				352F2510E67F477C94504E6F /* SimpleLineIcons.ttf in Resources */,
+				032591EFE97B4BF9A5F95BC6 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +478,21 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		08C2C24A9F3F43D588ED1CC3 /* [CP] Copy Pods Resources */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		5F2A0AFC2CE62B4A82DE19E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -496,7 +542,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SigeApp-SigeAppTests/Pods-SigeApp-SigeAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		14A29DE8060DD9849ED59DDF /* [CP] Check Pods Manifest.lock */ = {
+		66D49A801478E728CBEE374D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -518,21 +564,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		6327DD5C7F94EE874B729D29 /* [CP] Check Pods Manifest.lock */ = {
+		6AF00D2EEF2A18D24692A405 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -547,14 +579,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SigeApp-SigeAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SigeApp-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		93513D5CEA99C6B4305562B8 /* [CP] Copy Pods Resources */ = {
+		9060ABC854CC6AADE9C617FB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -604,29 +636,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SigeApp/Pods-SigeApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D3954E03B2EC36D515B8E561 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SigeApp-tvOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E10A47D56252ADF4884F9243 /* [CP] Check Pods Manifest.lock */ = {
+		95D6202711FB575B3960EDFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -642,6 +652,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SigeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F75273904D542FDD14E579DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SigeApp-SigeAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -741,7 +773,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DC782783989DBD84D88756F /* Pods-SigeApp-SigeAppTests.debug.xcconfig */;
+			baseConfigurationReference = 1D94E7EE6BBBB8FD021874D7 /* Pods-SigeApp-SigeAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -764,7 +796,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DD588E96AC59AFC9BB456DF /* Pods-SigeApp-SigeAppTests.release.xcconfig */;
+			baseConfigurationReference = 67B1FDD7000359155E5359B1 /* Pods-SigeApp-SigeAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -784,7 +816,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CDA79089D00502FC898E7AB /* Pods-SigeApp.debug.xcconfig */;
+			baseConfigurationReference = EFB42DD3AA9003A40F42CF57 /* Pods-SigeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -807,7 +839,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FA14C7E11CDB54E61F658BF /* Pods-SigeApp.release.xcconfig */;
+			baseConfigurationReference = DA3A52B4615DA1934FD5265B /* Pods-SigeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -828,7 +860,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 057AF99F919495D3BE52EFBA /* Pods-SigeApp-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 3BFDA713BBD2B2A659EB0985 /* Pods-SigeApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -856,7 +888,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26628227C6D4FF7B103075FE /* Pods-SigeApp-tvOS.release.xcconfig */;
+			baseConfigurationReference = 617FF7F8EE70746B6ED8B149 /* Pods-SigeApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -884,7 +916,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 709E5735BA14FE7F68C1BAD5 /* Pods-SigeApp-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = FD5F99F53F19EFEA7C9634E7 /* Pods-SigeApp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -911,7 +943,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D18519927FAD192F2C09A4A /* Pods-SigeApp-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 9500DBB438623697B8B4DA17 /* Pods-SigeApp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
