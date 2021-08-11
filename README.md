@@ -44,7 +44,7 @@ _Herramientas utilizadas para el proyecto_
 
 ## Autores ✒️
 
-_Groupar_
+* **Groupar**   - *Company* - [groupar](https://github.com/groupargit)
 
 * **Igor Ariza** - *Develop* - [igorariza](https://github.com/igorariza)
 
