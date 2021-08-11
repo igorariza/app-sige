@@ -32,7 +32,8 @@ react-native --version
 
 ## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+Android:
+ _create file_ sdk.dir= \\AppData\\Local\\Android\\Sdk 
 
 ## Construido con 🛠️
 
@@ -54,7 +55,4 @@ Este proyecto está bajo la Licencia (MIT) - mira el archivo [LICENSE.md](LICENS
 
 ## Expresiones de Gratitud 🎁
 
-* Solo hazlo "just do it" 📢
-* Cuida el agua
-* Siembra tu comida
-* Habla con las maquinas
+* "just do it" 📢
