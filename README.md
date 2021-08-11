@@ -26,20 +26,36 @@ _ios_
 
 ```
 npm --version
+yarn --version
 react-native --version
 ```
 
 
 ## Despliegue 📦
+Android:  <br>
+ _create file:_ local.properties
+ ```
+ sdk.dir %USERPROFILE%\\AppData\\Local\\Android\\Sdk 
+ ```
+ 
+ **Console**
+ ```
+ cd android && ./gradlew clean && cd ..
+ 
+ yarn install
+ 
+ yarn react-native run-android
+ ```
 
-Android:
- _create file_ sdk.dir= \\AppData\\Local\\Android\\Sdk 
 
 ## Construido con 🛠️
 
 _Herramientas utilizadas para el proyecto_
 
 * [npm](https://www.npmjs.com/) - Manejador de dependencias
+
+## APK Release
+* [APK](https://drive.google.com/file/d/1KbEzUSa5D7Ey3FkmZt9ts2pE1ovY5-sC/view?usp=sharing) - APK Release
 
 
 ## Autores ✒️
