@@ -18,16 +18,22 @@ git clone https://github.com/igorariza/app-sige.git
 Mira **Deployment** para conocer como desplegar el proyecto.
 
 
-### Pre-requisitos 📋
+### Pre-requisitos 📋 <br>
 
-_React native_
-_Android_
-_ios_
+| **Frontend** | Backend | Data |
+| --- | --- | --- |
+|_React native_ [<img src="https://user-images.githubusercontent.com/18409088/129100018-c75e1ca5-3c0d-4f2a-949a-2d376aae09be.png" alt="react native logo" width="24">](https://reactnative.dev/) | _Go_ [<img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/golang.png" alt="go logo" width="38">](https://golang.org/) |  _MySQl_ [<img src="https://user-images.githubusercontent.com/18409088/129264702-596502a1-f211-4777-a2e6-0b759f582988.png" alt="mysql logo" width="24">](https://www.mysql.com/)
+| _Android_ [<img src="https://user-images.githubusercontent.com/18409088/129100400-e7f90b17-f86b-418c-987e-6a0ecd0266d9.png" alt="android logo" width="24">](https://android.com/)
+| _ios_ [<img src="https://user-images.githubusercontent.com/18409088/129265639-8cf3b874-cc2c-496c-becf-ebd8447ed0b7.png" alt="ios logo" width="24">](https://www.apple.com/) 
+
 
 ```
+
 npm --version
 yarn --version
 react-native --version
+go --version
+
 ```
 
 
@@ -46,6 +52,9 @@ Android:  <br>
  
  yarn react-native run-android
  ```
+ 
+ ## API ##
+ * [github](https://github.com/igorariza/Go-BackendMySQl.git)
 
 
 ## Construido con 🛠️
