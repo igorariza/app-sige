@@ -35,7 +35,7 @@ react-native --version
 Android:  <br>
  _create file:_ local.properties
  ```
- sdk.dir %USERPROFILE%\\AppData\\Local\\Android\\Sdk 
+ sdk.dir = %USERPROFILE%\\AppData\\Local\\Android\\Sdk 
  ```
  
  **Console**
