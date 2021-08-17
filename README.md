@@ -78,6 +78,4 @@ _Herramientas utilizadas para el proyecto_
 
 Este proyecto está bajo la Licencia (MIT) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
-## Expresiones de Gratitud 🎁
-
 * "just do it" 📢
