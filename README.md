@@ -53,7 +53,7 @@ Android:  <br>
  yarn react-native run-android
  ```
  
- ## API _Go_ ##
+ ## API [<img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/golang.png" alt="go logo" width="38">](https://golang.org/) ##
  * [github](https://github.com/igorariza/Go-BackendMySQl.git)
 
 
