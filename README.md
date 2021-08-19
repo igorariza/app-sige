@@ -20,7 +20,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋 <br>
 
-| **Frontend** | Backend | Data |
+| **Front** | Back | Data |
 | --- | --- | --- |
 |[<img src="https://user-images.githubusercontent.com/18409088/129100018-c75e1ca5-3c0d-4f2a-949a-2d376aae09be.png" alt="react native logo" width="24">](https://reactnative.dev/) | [<img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/golang.png" alt="go logo" width="38">](https://golang.org/) |[<img src="https://user-images.githubusercontent.com/18409088/129264702-596502a1-f211-4777-a2e6-0b759f582988.png" alt="mysql logo" width="24">](https://www.mysql.com/)
 |[<img src="https://user-images.githubusercontent.com/18409088/129100400-e7f90b17-f86b-418c-987e-6a0ecd0266d9.png" alt="android logo" width="24">](https://android.com/)
