@@ -42,15 +42,26 @@ Android:  <br>
  _create file:_ local.properties
  ```
  sdk.dir = %USERPROFILE%\\AppData\\Local\\Android\\Sdk 
+ 
+ brew install watchman   
+ 
+ brew tap AdoptOpenJDK/openjdk  
+ brew install --cask adoptopenjdk8   
+ 
+ 
+ brew install android-platform-tools
+ adb devices
+ 
+ adb -s 192.168.0.101 reverse tcp:8081 tcp:8081
  ```
  
  **Console**
  ```
+ yarn install
  cd android && ./gradlew clean && cd ..
  
- yarn install
  
- yarn react-native run-android
+ react-native run-android
  ```
  
  ## API [<img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/golang.png" alt="go logo" width="38">](https://golang.org/) ##
